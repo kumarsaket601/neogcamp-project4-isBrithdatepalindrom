@@ -1,12 +1,6 @@
-var birthDate = document.querySelector('#birth-date');
-var submitBtn = document.querySelector('#check-button');
-var outputDiv = document.querySelector('#output');
 
-var date = {
-    day: 3,
-    month: 5,
-    year: 2021
-};
+
+
 
 function reverseStr(str) {
     var listOfChars = str.split('');
@@ -62,7 +56,7 @@ function checkPalindromDateFormat(date) {
     var palindromDateFormat = allTheFormatDate(date);
 
     var flag = false;
-    for (var i = 0; i < checkPalindromDateFormat.length; i++) {
+    for (var i = 0; i < palindromDateFormat.length; i++) {
         if (isPalindrom(palindromDateFormat[i])) {
             flag = true;
             break;
@@ -87,7 +81,7 @@ function isLeapYear(year) {
 }
 
 function getNextDate(date) {
-    var day = date.day;
+    var day = date.day + 1;
     var month = date.month;
     var year = date.year;
 
@@ -121,7 +115,7 @@ function getNextDate(date) {
         year: year,
     };
 }
-console.log(getNextDate(date));
+
 
 function getNextPalindrom(date) {
     var counter = 0;
@@ -143,9 +137,13 @@ function getNextPalindrom(date) {
     }
     return [counter, nextDate];
 }
+var birthDate = document.querySelector('#birth-date');
+var submitBtn = document.querySelector('#check-button');
+var outputDiv = document.querySelector('#output');
 
 function clickHandler(e) {
     var bdayStr = birthDate.value;
+
     if (bdayStr !== '') {
         var listOfDate = bdayStr.split('-');
         var date = {
@@ -154,13 +152,15 @@ function clickHandler(e) {
             year: Number(listOfDate[0])
         };
 
-        var isPalindrom = checkPalindromDateFormat(date);
-        if (isPalindrom) {
-            outputDiv.innerText = 'Yeah!! Your Birthdate is palindrom';
+        var isPalindrome = checkPalindromDateFormat(date);
+
+        if (isPalindrome) {
+            outputDiv.innerText = 'Yay! your birthday is a palindrome!! 🥳🥳';
         } else {
             var [counter, nextDate] = getNextPalindrom(date);
-            outputDiv.innerText = `The next palindrom date is ${nextDate.day}-${nextDate.month}-${nextDate.year},you missed it by ${counter} days!`;
+
+            outputDiv.innerText = `The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${counter} days! 😔`;
         }
     }
 }
-submitBtn.addEventListener('click', clickHandler)
+submitBtn.addEventListener('click', clickHandler);
