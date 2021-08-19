@@ -12,6 +12,17 @@ body{
     serif;
     background-color: var(--secondary-color);
 }
+.navigation{
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-right: 2rem;
+}
+
+.navigation a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
 
 .container{
     
@@ -51,6 +62,8 @@ input {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 1rem;
+    max-width: 600px;
+    margin: auto;
 }
 
 /** footer**/
