@@ -12,18 +12,7 @@ body{
     serif;
     background-color: var(--secondary-color);
 }
-.navigation{
-    padding: 1rem 2rem;
-    text-align: center;
-    margin-right: 2rem;
-    
-}
 
-.navigation a{
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-}
 
 .container{
     
