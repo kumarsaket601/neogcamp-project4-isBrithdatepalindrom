@@ -36,6 +36,7 @@ input {
     padding: 0.5rem 0.5rem;
 }
 #check-button {
+    
     display: block;
     padding: 0.5rem 1rem;
     background-color: var(--secondary-color);
