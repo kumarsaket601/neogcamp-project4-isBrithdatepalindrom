@@ -37,7 +37,6 @@ input {
 }
 #check-button {
     display: block;
-
     padding: 0.5rem 1rem;
     background-color: var(--secondary-color);
     color: var(--seconday-color);
@@ -46,6 +45,11 @@ input {
     border-color: var(--primary-color);
     border-radius: 0.5rem;
     margin: 1rem auto;
+}
+#output{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
 }
 
 /** footer**/
@@ -72,7 +76,7 @@ input {
 }
 
 .footer ul {
-    padding-inline-start: opx;
+    padding-inline-start: 0px;
 }
 
 .footer .footer-header {
