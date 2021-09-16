@@ -151,7 +151,7 @@ function clickHandler(e) {
         var isPalindrome = checkPalindromDateFormat(date);
 
         if (isPalindrome) {
-            outputDiv.innerText = 'Yay! your birthday is a palindrome!! 🥳🥳';
+            outputDiv.innerText = 'Yay! your birthday is a palindrome!!';
         } else {
             var [setcounter, nextDate] = getNextPalindrom(date);
 
