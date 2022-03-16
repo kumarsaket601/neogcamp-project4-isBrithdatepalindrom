@@ -50,11 +50,14 @@ input {
     margin: 1rem auto;
 }
 #output{
+
+    
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 1rem;
     max-width: 600px;
     margin: auto;
+    
 }
 
 /** footer**/
@@ -69,6 +72,7 @@ input {
 
 
 .footer {
+    max-width:100%;
     background-color: var(--secondary-color);
     padding: 7rem 1rem;
     text-align: center;
